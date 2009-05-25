@@ -1,0 +1,37 @@
+#summary One-sentence summary of this page.
+#labels Phase-Implementation,Phase-Deploy,Phase-Support
+
+= Introduction =
+
+Installing a PHP-GUI for your scanner.
+
+
+= Details =
+  # After you have installed a web server (any web server is good) make sure you install PHP
+  # Check if PHP is working fine by putting a file info.php in /var/www (or depends of your OS)
+{{{
+<?PHP 
+         phpinfo();
+?>
+}}}
+  # Install saned on your machine :- For debian based: sudo apt-get install saned
+  # Follow details [http://www.sane-project.org/README.linux here] on how to set up SANE
+  # Follow details [http://www.sane-project.org/man/saned.1.html here] on how to set up SANEd
+  # Check that the configuration is working fine and using sudo do scanimage -L
+  # If it works, check that using a non-admin user can do scanimage -L. If the output is different, and says that there is no scanner installed, it means you do not have any right on the scanner
+  # Add yourself to the group scanner by doing:
+{{{ 
+usermod -a -G scanner your_username 
+}}}
+  # Now you should do *scanimage -L* and have the name of your scanner outputted.
+  # Now add your webserver's username (normally _www-data_) to the scanner group
+  # Download *sane_x_x.tar.gz* using wget or similar
+  # Untar the downloaded file using 
+{{{
+tar xzvf sane_*_*.tar.gz
+}}}
+  # Copy the file to a folder readable and writable (/var/www-data for example) by your web server
+  # Open the file using your favourite text editor (vi/vim/nano/others) and change the config section to suit your needs
+  # Restart your web server
+  # Point your web browser to the scan.php file
+  # You should have a scanned image asking you to be saved
