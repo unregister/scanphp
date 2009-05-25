@@ -1,9 +1,9 @@
-#summary One-sentence summary of this page.
+#summary Installing a PHP-GUI for your scanner.
 #labels Phase-Implementation,Phase-Deploy,Phase-Support
 
 = Introduction =
+If you want a lightweight GUI for your scanner this is your best bet. A very lightweight GUI easily deployed on all your LAN (it's web-based) so it is very easy to acquire scans. Scanning can be easily done also outside the LAN, since any machine which access the web-server can scan - if you have your media at the scanner ;)
 
-Installing a PHP-GUI for your scanner.
 
 
 = Details =
