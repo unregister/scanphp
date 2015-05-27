@@ -1,0 +1,3 @@
+If you want a lightweight GUI for your scanner this is your best bet. A very lightweight GUI easily deployed on all your LAN (it's web-based) so it is very easy to acquire scans. Scanning can be easily done also outside the LAN, since any machine which access the web-server can scan - if you have your media at the scanner ;)
+
+A PHP **Lightweight** Scanning GUI which makes use of the Open Source [SANE](http://www.sane-project.org/) Scanning software. The PHP GUI can be installed on any Web Server as long as PHP can be run. PHP calls the **scanimage** command in order to provide the scan. Post scanning, the image is piped "|" to gocr / pnmtojpeg in order to provide the acquired file.
